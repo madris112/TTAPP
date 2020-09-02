@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "187559276011",
+    "firebase_url": "https://ttapp-ff231.firebaseio.com",
+    "project_id": "ttapp-ff231",
+    "storage_bucket": "ttapp-ff231.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187559276011:android:3307c271cb5bc4bab43dae",
+        "android_client_info": {
+          "package_name": "com.example.ttapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187559276011-5tlvdmad4crfpvsi863bg8npgh7dl699.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiOoNv0hYnP7KFofkFm_ToihAbj_Lp-qs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187559276011-5tlvdmad4crfpvsi863bg8npgh7dl699.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
