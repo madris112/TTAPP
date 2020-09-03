@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10sp"
+        app:cardCornerRadius="10dp"
+        android:background="@color/cardview_light_background">
+
+        <TextView
+            android:id="@+id/classname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cs206"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginTop="5sp"/>
+
+        <TextView
+            android:id="@+id/profname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="prof : dandapat"
+            android:layout_marginTop="30sp"
+            android:textSize="16sp"
+            android:layout_marginStart="40sp"/>
+
+        <Button
+            android:id="@+id/joinclassbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOIN CLASS"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60sp"/>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
