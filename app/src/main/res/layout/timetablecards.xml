@@ -22,13 +22,54 @@
             android:layout_marginTop="5sp"/>
 
         <TextView
-            android:id="@+id/profname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="prof : dandapat"
+            android:text="prof : "
             android:layout_marginTop="30sp"
             android:textSize="16sp"
             android:layout_marginStart="40sp"/>
+
+        <TextView
+            android:id="@+id/profname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dandapat"
+            android:layout_marginTop="30sp"
+            android:textSize="16sp"
+            android:layout_marginStart="90sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textStyle="bold"
+            android:layout_marginTop="65sp"
+            android:layout_marginStart="2sp"/>
+
+        <TextView
+            android:id="@+id/starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textStyle="italic"
+            android:layout_marginTop="80sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textStyle="italic"
+            android:layout_marginTop="80sp"
+            android:layout_marginStart="17sp"/>
+        <TextView
+            android:id="@+id/endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textStyle="italic"
+            android:layout_marginTop="80sp"
+            android:layout_marginStart="25sp"/>
+
 
         <Button
             android:id="@+id/joinclassbutton"

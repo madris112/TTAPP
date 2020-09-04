@@ -5,56 +5,56 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 
-import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText rollnoText, passwordText;
+    EditText nameText, emailText, rollnoText, passwordText;
     Button signUpButton;
     TextView loginText, timeBox;
+    ProgressBar progressBar;
     boolean signUpViewIsVisible = true;
-    DatabaseReference ref;
-    com.example.ttapp.Member member;
+    FirebaseAuth fAuth;
 
-    public void register(View view){
-        String rollno = rollnoText.getText().toString().trim();
-        String password = passwordText.getText().toString().trim();
-        member.setRollno(rollno);
-        member.setPassword(password);
 
-        ref.push().setValue(member);
-
-        Intent intent = new Intent(getApplicationContext(),home.class);
-        startActivity(intent);
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rollnoText =(EditText) findViewById(R.id.rollnoEditText);
-        passwordText = (EditText)findViewById(R.id.passwordEditText);
-        signUpButton =(Button) findViewById(R.id.signUpButton);
-        loginText = (TextView)findViewById(R.id.loginTextView);
+        nameText = findViewById(R.id.nameText);
+        emailText = findViewById(R.id.emailText);
+        rollnoText =(EditText) findViewById(R.id.rollnoText);
+        passwordText = (EditText)findViewById(R.id.passwordText);
+        signUpButton =(Button) findViewById(R.id.signupButton);
+        loginText = (TextView)findViewById(R.id.signupText);
         timeBox = findViewById(R.id.timeBox);
-        member = new Member();
+        progressBar = findViewById(R.id.progressBar);
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Members");
+        fAuth = FirebaseAuth.getInstance();
+
+
+        if(fAuth.getCurrentUser() != null){
+            Intent intent = new Intent(getApplicationContext(),home.class);
+            startActivity(intent);
+            finish();
+        }
 
         final Thread thread = new Thread() {
 
@@ -81,23 +81,52 @@ public class MainActivity extends AppCompatActivity {
         thread.start();
 
 
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = emailText.getText().toString().trim();
+                String password = passwordText.getText().toString().trim();
+
+                if(TextUtils.isEmpty(email)){
+                    emailText.setError("Email is requied");
+                    return;
+                }
+                if(TextUtils.isEmpty(password)){
+                    passwordText.setError("Password is requied");
+                    return;
+                }
+                if(password.length()<4){
+                    passwordText.setError("Password must contain atleast 4 characters !");
+                    return;
+                }
+
+                progressBar.setVisibility(View.VISIBLE);
+
+                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(MainActivity.this,"Successfully Registered",Toast.LENGTH_SHORT);
+                            Intent intent = new Intent(getApplicationContext(),home.class);
+                            startActivity(intent);
+                        }else{
+                            Toast.makeText(MainActivity.this,"Error : " + task.getException().getMessage(),Toast.LENGTH_SHORT);
+                        }
+                    }
+                });
+
+            }
+        });
+
 
 
 
         loginText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(signUpViewIsVisible){
-                    signUpViewIsVisible = false;
-                    signUpButton.setText("Login");
-                    loginText.setText("or, SignUp");
-                }else{
-                    signUpViewIsVisible = true;
-                    signUpButton.setText("SignUp");
-                    loginText.setText("or, Login");
-                }
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
             }
         });
-
     }
 }
