@@ -3,6 +3,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="openNavDrawer">Nav Drawer Open</string>
+    <string name="closeNavDrawer">Nav Drawer Closed</string>
+
+
     <string-array name="starttime">
         <item>NA</item>
         <item>8</item>
