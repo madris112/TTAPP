@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
 
-    EditText emailText, passwordText;
+    EditText emailEdit, passwordEdit;
     Button loginButton;
     TextView sinupText;
     ProgressBar progressBar;
@@ -31,8 +31,8 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        emailText = findViewById(R.id.emailText);
-        passwordText = findViewById(R.id.passwordText);
+        emailEdit = findViewById(R.id.emailEdit);
+        passwordEdit = findViewById(R.id.passwordEdit);
         loginButton.findViewById(R.id.loginButton);
         sinupText = findViewById(R.id.signupText);
 
@@ -41,19 +41,19 @@ public class Login extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = emailText.getText().toString().trim();
-                String password = passwordText.getText().toString().trim();
+                String email = emailEdit.getText().toString().trim();
+                String password = passwordEdit.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email)){
-                    emailText.setError("Email is requied");
+                    emailEdit.setError("Email is requied");
                     return;
                 }
                 if(TextUtils.isEmpty(password)){
-                    passwordText.setError("Password is requied");
+                    passwordEdit.setError("Password is requied");
                     return;
                 }
                 if(password.length()<4){
-                    passwordText.setError("Password must contain atleast 4 characters !");
+                    passwordEdit.setError("Password must contain atleast 4 characters !");
                     return;
                 }
 
