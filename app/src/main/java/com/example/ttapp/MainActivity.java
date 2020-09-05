@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         signUpButton =(Button) findViewById(R.id.signupButton);
         loginText = (TextView)findViewById(R.id.loginText);
         timeBox = findViewById(R.id.timeBox);
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBarSignup);
 
         fAuth = FirebaseAuth.getInstance();
 
@@ -105,11 +105,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(MainActivity.this,"Successfully Registered",Toast.LENGTH_SHORT);
+                            Toast.makeText(MainActivity.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(),home.class);
                             startActivity(intent);
                         }else{
-                            Toast.makeText(MainActivity.this,"Error : " + task.getException().getMessage(),Toast.LENGTH_SHORT);
+                            Toast.makeText(MainActivity.this,"Error : " + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.INVISIBLE);
                         }
                     }
                 });

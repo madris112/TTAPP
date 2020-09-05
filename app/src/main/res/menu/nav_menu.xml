@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Handy-Section">
-        <menu>
+
             <item android:title="Assignment"
-                android:icon="@drawable/assignment"/>
-            <item android:title="Resources"
-                android:icon="@drawable/reso"/>
+                android:icon="@drawable/assignment">
+                <menu>
+                    <item android:id="@+id/cs204_resources"
+                        android:title="CS204"
+                        
+            />
+                    <item android:id="@+id/cs205_resources"
+                        android:title="CS205"
+                        />
+                    <item android:id="@+id/cs206_resources"
+                        android:title="CS206"
+                        />
+                    <item android:id="@+id/ma201_resources"
+                        android:title="MA201"
+                        />
+                    <item android:id="@+id/hs201_resources"
+                        android:title="HS201"
+                        />
+                </menu>
+            </item>
+
+    <item android:title="Profile">
+
+        <menu>
+            <item android:title="Sign Out"
+                android:id="@+id/sign_out"/>
         </menu>
     </item>
 
