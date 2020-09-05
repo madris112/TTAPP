@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     Button signUpButton;
     TextView loginText, timeBox;
     ProgressBar progressBar;
-    boolean signUpViewIsVisible = true;
     FirebaseAuth fAuth;
 
 
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         rollnoText =(EditText) findViewById(R.id.rollnoText);
         passwordText = (EditText)findViewById(R.id.passwordText);
         signUpButton =(Button) findViewById(R.id.signupButton);
-        loginText = (TextView)findViewById(R.id.signupText);
+        loginText = (TextView)findViewById(R.id.loginText);
         timeBox = findViewById(R.id.timeBox);
         progressBar = findViewById(R.id.progressBar);
 
@@ -124,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
         loginText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"ok",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(),Login.class);
                 startActivity(intent);
             }
