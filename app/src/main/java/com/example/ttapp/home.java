@@ -130,7 +130,12 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navbar);
 
+        setSupportActionBar(toolbar);
+
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.openNavDrawer,R.string.closeNavDrawer);
+
+
+
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
