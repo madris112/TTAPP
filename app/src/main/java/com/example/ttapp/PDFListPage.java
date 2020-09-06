@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +23,8 @@ public class PDFListPage extends AppCompatActivity {
     ArrayAdapter<String> cs205_adapter;
     ListView pdflistview;
 
+    FloatingActionButton assignmentadderfab;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,16 @@ public class PDFListPage extends AppCompatActivity {
         pdflistview = findViewById(R.id.pdf_list);
         cs204_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ass_cs204);
         cs205_adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ass_cs205);
+
+        assignmentadderfab = findViewById(R.id.assignmentadderfab);
+
+        assignmentadderfab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent inte = new Intent(getApplicationContext(),assignmentactivity.class);
+                startActivity(inte);
+            }
+        });
 
 
         int number = 0;

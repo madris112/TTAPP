@@ -22,4 +22,13 @@
         <item>18</item>
         <item>19</item>
     </string-array>
+
+    <array name="subjectstr">
+        <item>Select Subject</item>
+        <item>HS201</item>
+        <item>CS204</item>
+        <item>CS205</item>
+        <item>CS206</item>
+        <item>MA201</item>
+    </array>
 </resources>
