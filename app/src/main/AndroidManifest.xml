@@ -3,6 +3,7 @@
     package="com.example.ttapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Book"></activity>
+        <activity android:name=".UploadActivity"></activity>
+        <activity android:name=".PDFListPage" />
+        <activity android:name=".Book" />
         <activity android:name=".home" />
         <activity android:name=".CreateTimetable" />
         <activity android:name=".MainActivity" />

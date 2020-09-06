@@ -103,8 +103,6 @@ public class todayclass extends Fragment {
 
                 }
 
-                ArrayAdapter arrayadpt = new ArrayAdapter(view.getContext(),retreivecoursedata);
-                lstvi.setAdapter(arrayadpt);
 
 
 

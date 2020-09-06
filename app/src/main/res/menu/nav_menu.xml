@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-            <item android:title="Assignment"
+            <item android:title="Assignments"
                 android:icon="@drawable/ic_baseline_assignment_24">
                 <menu>
                     <item android:id="@+id/cs204_resources"
