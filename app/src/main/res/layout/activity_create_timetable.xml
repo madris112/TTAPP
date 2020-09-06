@@ -16,32 +16,58 @@
         android:text="CREATE COURSE"
         android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/coursename"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="COURSE NAME"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginVertical="3dp"/>
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/instructorname"
+        <EditText
+            android:id="@+id/coursename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="COURSE NAME"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginVertical="3dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="INSTRUCTOR"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginVertical="3dp"/>
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/instructorname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="INSTRUCTOR"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginVertical="3dp"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <EditText
         android:id="@+id/link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COURSE LINK"
+        android:hint="COURSE LINK"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginVertical="3dp"/>
+
+
+
+</com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
 
     <TextView
         android:id="@+id/time"

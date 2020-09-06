@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
 
-public class ArrayAdapter<P> extends BaseAdapter {
+public class ArrayAdapter extends BaseAdapter {
 
     private Context context;
     private List<course> courselist;
@@ -94,9 +95,14 @@ public class ArrayAdapter<P> extends BaseAdapter {
         joinclassbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(courselink));
-                context.startActivity(intent);
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(courselink));
+                    context.startActivity(intent);
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(view.getContext(),"provide correct url",Toast.LENGTH_SHORT).show();
+                }
 
 
             }
