@@ -59,8 +59,10 @@ public class todayclass extends Fragment {
                     if(weekday_name.equals("Monday"))
                     {
                         String sttime = coursecontent.getMstart();
+
                         if(!sttime.equals("NA"))
                         {
+                            Log.i("sttime",sttime);
                             retreivecoursedata.add(coursecontent);
                         }
                     }
@@ -102,6 +104,9 @@ public class todayclass extends Fragment {
 
 
                 }
+
+                ArrayAdapter adpt = new ArrayAdapter(getContext(),retreivecoursedata);
+                lstvi.setAdapter(adpt);
 
 
 

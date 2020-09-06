@@ -19,10 +19,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/studybuddy" />
 
-
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/emailedittextlyt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="14dp"
+    android:layout_marginEnd="20dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageView">
     <EditText
         android:id="@+id/emailEdit"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="97dp"
@@ -34,19 +43,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/passwordEdit"
-        android:layout_width="0dp"
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordedittxtlyt"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="20dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/emailedittextlyt">
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
     <Button
         android:id="@+id/loginButton"
@@ -58,7 +84,7 @@
         android:text="Login"
         app:layout_constraintEnd_toStartOf="@+id/signupText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordedittxtlyt" />
 
     <TextView
         android:id="@+id/signupText"
@@ -70,7 +96,7 @@
         android:text="or, Sign Up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/loginButton"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordedittxtlyt" />
 
     <ProgressBar
         android:id="@+id/progressBarSignin"
