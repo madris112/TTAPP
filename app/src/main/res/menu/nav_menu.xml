@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-            <item android:title="Assignment"
-                android:icon="@drawable/assignment">
+            <item android:title="Assignments"
+                android:icon="@drawable/ic_baseline_assignment_24">
                 <menu>
                     <item android:id="@+id/cs204_resources"
                         android:title="CS204"
-                        
+
             />
                     <item android:id="@+id/cs205_resources"
                         android:title="CS205"
@@ -23,8 +23,18 @@
                         />
                 </menu>
             </item>
+    <item android:title="Notes"
+        android:icon="@drawable/ic_baseline_note_24">
 
-    <item android:title="Profile">
+        <menu>
+            <item android:id="@+id/my_notes"
+                android:title="My Notes"
+                />
+        </menu>
+    </item>
+
+    <item android:title="Profile"
+        android:icon="@drawable/ic_baseline_account_circle_24">
 
         <menu>
             <item android:title="Sign Out"

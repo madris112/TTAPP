@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Locale;
 
-public class ArrayAdapter extends BaseAdapter {
+public class ArrayAdapter<P> extends BaseAdapter {
 
     private Context context;
     private List<course> courselist;

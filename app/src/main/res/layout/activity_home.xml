@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:backgroundTint="@color/Yellow"
+        android:layout_margin="20dp"
         android:src="@drawable/addsyllabus"/>
 
     <androidx.viewpager.widget.ViewPager
@@ -75,6 +76,7 @@
     </androidx.viewpager.widget.ViewPager>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 
     <com.google.android.material.navigation.NavigationView
