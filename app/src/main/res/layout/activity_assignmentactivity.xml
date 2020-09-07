@@ -44,16 +44,30 @@
         android:textAlignment="center"
         android:layout_marginBottom="20dp"/>
 
-    <EditText
-        android:id="@+id/lastdateofsubmission"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginHorizontal="60dp"
-        android:hint="last date of submission(dd/mm/yy)"
-        android:inputType="date"
-        android:textAlignment="center"
-        android:layout_marginBottom="20dp"/>
+        android:text="Select deadline date:"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_date_range_24"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:id="@+id/datebutton"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateshow"
+        android:layout_gravity="center"
+        />
+
 
     <Button
         android:id="@+id/uploadbutt"

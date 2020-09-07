@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".assignmentactivity"></activity>
+        <activity android:name=".ListOfPDFs"></activity>
+        <activity android:name=".assignmentactivity" />
         <activity android:name=".UploadActivity" />
         <activity android:name=".PDFListPage" />
         <activity android:name=".Book" />
