@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,14 +54,22 @@ public class ListOfPDFs extends AppCompatActivity {
             }
         });
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("uploads");
+//        assignmentadderfab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent inte = new Intent(getApplicationContext(),assignmentactivity.class);
+//                startActivity(inte);
+//            }
+//        });
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("uploads");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for(DataSnapshot postsnapshot :  snapshot.getChildren()){
-                    uploadPDF uploadPDF = postsnapshot.getValue(com.example.ttapp.uploadPDF.class);
-                    pdftobeshown.add(uploadPDF);
+                    uploadPDF uppdf = postsnapshot.getValue(com.example.ttapp.uploadPDF.class);
+                    pdftobeshown.add(uppdf);
 
                 }
                 String[] uploads = new String[pdftobeshown.size()];
@@ -82,11 +91,11 @@ public class ListOfPDFs extends AppCompatActivity {
         pdflist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                uploadPDF uploadPDF = pdftobeshown.get(i);
+                uploadPDF uppdf = pdftobeshown.get(i);
 
-                Intent intent = new Intent();
-                intent.setType(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(uploadPDF.getUrl()));
+                Log.i("pdflink",uppdf.getUrl());
+
+                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(uppdf.getUrl()));
                 startActivity(intent);
             }
         });
