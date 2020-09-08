@@ -30,6 +30,8 @@
             <item android:id="@+id/my_notes"
                 android:title="My Notes"
                 />
+            <item android:id="@+id/books"
+                android:title="BOOKS"/>
         </menu>
     </item>
 

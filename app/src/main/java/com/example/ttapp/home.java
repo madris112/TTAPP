@@ -144,6 +144,9 @@ public class home extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent intent = new Intent(getApplicationContext(),UploadActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.books:
+                Intent intent6 = new Intent(getApplicationContext(),booksandnotesadder.class);
+                startActivity(intent6);
             case R.id.sign_out:
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
