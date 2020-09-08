@@ -3,6 +3,8 @@ package com.example.ttapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -26,10 +28,12 @@ import java.util.List;
 public class ListOfPDFs extends AppCompatActivity {
 
     Toolbar toolbar;
-    ListView pdflist;
+    RecyclerView pdflist;
     DatabaseReference databaseReference;
     List<uploadPDF> pdftobeshown;
     FloatingActionButton assignmentadderfab;
+    pdfAdapter adapter;
+    pdfAdapter.RecyclerViewClickListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +43,12 @@ public class ListOfPDFs extends AppCompatActivity {
         toolbar = findViewById(R.id.pdflisttoolbar);
         pdflist = findViewById(R.id.listofpdf);
 
+
         pdftobeshown = new ArrayList<>();
 
         setSupportActionBar(toolbar);
+
+        pdflist.setLayoutManager(new LinearLayoutManager(this));
 
 
         assignmentadderfab = findViewById(R.id.assignmentadderfab);
@@ -72,14 +79,21 @@ public class ListOfPDFs extends AppCompatActivity {
                     pdftobeshown.add(uppdf);
 
                 }
-                String[] uploads = new String[pdftobeshown.size()];
-
-                for(int i=0; i<uploads.length; i++){
-                    uploads[i]= pdftobeshown.get(i).getName();
-                }
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,uploads);
+             setOnClickListener();
+                adapter = new pdfAdapter(ListOfPDFs.this,pdftobeshown,listener);
                 pdflist.setAdapter(adapter);
 
+            }
+
+            private void setOnClickListener() {
+                listener = new pdfAdapter.RecyclerViewClickListener() {
+                    @Override
+                    public void onClick(View v, int position) {
+                        uploadPDF uppdf = pdftobeshown.get(position);
+                        Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(uppdf.getUrl()));
+                        startActivity(intent);
+                    }
+                };
             }
 
             @Override
@@ -88,18 +102,21 @@ public class ListOfPDFs extends AppCompatActivity {
             }
         });
 
-        pdflist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                uploadPDF uppdf = pdftobeshown.get(i);
+ //       pdflist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  //          @Override
+    //        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+      //          uploadPDF uppdf = pdftobeshown.get(i);
+//
+  //              Log.i("pdflink",uppdf.getUrl());
+//
+  //              Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(uppdf.getUrl()));
+    //           startActivity(intent);
+      //  //    }
+       // });
 
-                Log.i("pdflink",uppdf.getUrl());
-
-                Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(uppdf.getUrl()));
-                startActivity(intent);
-            }
-        });
 
 
-    }
-}
+        }
+
+
+        }

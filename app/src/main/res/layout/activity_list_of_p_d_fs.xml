@@ -29,11 +29,11 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listofpdf"
         android:layout_width="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:layout_height="297dp" />
+        android:layout_height="570dp" />
 
 
 
