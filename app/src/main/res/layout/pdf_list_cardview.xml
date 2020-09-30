@@ -8,14 +8,23 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:cardCornerRadius="10dp">
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="9dp"
+        app:cardCornerRadius="10dp"
+      >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
 
 
         <TextView
             android:id="@+id/pdf_file_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="Assignment_Sample"
@@ -27,18 +36,25 @@
             android:layout_height="wrap_content"
             android:text="Deadline : "
             android:textSize="18sp"
-            android:layout_gravity="bottom"
+            android:layout_below="@+id/pdf_file_name"
             android:layout_margin="12dp"
             />
 
         <TextView
             android:id="@+id/deadline_date"
-            android:layout_width="95dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="right"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/pdf_file_name"
+
             android:text="dd/mm/yyyy"
             android:textSize="18sp" />
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

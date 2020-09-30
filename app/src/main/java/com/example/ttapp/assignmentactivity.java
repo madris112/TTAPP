@@ -163,7 +163,7 @@ public class assignmentactivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Uri> task) {
                 if (task.isSuccessful()) {
                     Uri url = task.getResult();
-                    uploadPDF uploadPDF = new uploadPDF(assignmentname.getText().toString(), dateinfo,subjectname.getSelectedItem().toString(),url.toString());
+                    uploadPDF uploadPDF = new uploadPDF(assignmentname.getText().toString().trim(), dateinfo,subjectname.getSelectedItem().toString(),url.toString());
                     databaseReference.child(databaseReference.push().getKey()).setValue(uploadPDF);
                     Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
