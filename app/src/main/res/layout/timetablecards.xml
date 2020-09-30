@@ -6,78 +6,110 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10sp"
+        android:layout_height="160dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"
         app:cardCornerRadius="10dp"
-        android:background="@color/cardview_light_background">
+        app:cardBackgroundColor="@color/turquoise"
+        app:cardElevation="0dp">
 
-        <TextView
-            android:id="@+id/classname"
+            <TextView
+                android:id="@+id/classname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cs206"
+                android:textSize="24sp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:layout_marginTop="5sp"
+                android:textColor="@color/cardtextcolor"/>
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cs206"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
-            android:layout_marginTop="5sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:src="@drawable/cardviewicon"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:text="prof : "
-            android:layout_marginTop="30sp"
-            android:textSize="16sp"
-            android:layout_marginStart="40sp"/>
+            android:src="@drawable/clock"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/personicon"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="80dp"/>
+
 
         <TextView
             android:id="@+id/profname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="110sp"
+            android:layout_marginTop="50sp"
             android:text="dandapat"
-            android:layout_marginTop="30sp"
-            android:textSize="16sp"
-            android:layout_marginStart="90sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Time"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="65sp"
-            android:layout_marginStart="2sp"/>
+            android:textColor="@color/cardtextcolor"/>
 
         <TextView
-            android:id="@+id/starttime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="11"
-            android:textStyle="italic"
-            android:layout_marginTop="80sp"/>
+                android:id="@+id/starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="110dp"
+            android:textColor="@color/cardtextcolor"/>
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="135sp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/cardtextcolor"/>
+            <TextView
+                android:id="@+id/endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/cardtextcolor"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="145dp"/>
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
-            android:textStyle="italic"
-            android:layout_marginTop="80sp"
-            android:layout_marginStart="17sp"/>
-        <TextView
-            android:id="@+id/endtime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="12"
-            android:textStyle="italic"
-            android:layout_marginTop="80sp"
-            android:layout_marginStart="25sp"/>
+            android:src="@drawable/videoicon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
 
 
-        <Button
-            android:id="@+id/joinclassbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="JOIN CLASS"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="60sp"/>
+
+            <Button
+                android:id="@+id/joinclassbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="JOIN CLASS"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@drawable/buttondraw"
+                android:layout_marginBottom="5dp"
+                android:elevation="0dp"/>
+
 
 
 

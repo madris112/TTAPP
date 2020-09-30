@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".todayclass">
+    tools:context=".todayclass"
+    android:background="@drawable/gradient">
 
     <ListView
         android:id="@+id/lstview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_marginBottom="15sp">
 
     </ListView>
 

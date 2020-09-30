@@ -40,7 +40,8 @@
         android:layout_gravity="bottom|end"
         android:backgroundTint="@color/Yellow"
         android:layout_margin="20dp"
-        android:src="@drawable/addsyllabus"/>
+        android:src="@drawable/addsyllabus"
+        app:tint="@color/orange"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpgr"
@@ -54,14 +55,15 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Yellow">
+        android:background="@color/Yellow"
+        app:tabTextColor="@color/orange">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Toda's Lectures"
-            android:background="@color/Yellow"/>
+            android:background="@color/Yellow" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tdl"
