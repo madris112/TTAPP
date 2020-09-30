@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+
         android:layout_marginStart="10dp"
         android:layout_marginEnd="9dp"
         app:cardCornerRadius="10dp"
@@ -18,6 +19,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
 
 
         <TextView
@@ -40,6 +42,7 @@
 
         <TextView
             android:id="@+id/deadline_date"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/textView2"
@@ -47,6 +50,7 @@
             android:layout_marginLeft="150dp"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/pdf_file_name"
+
             android:text="dd/mm/yyyy"
             android:textSize="18sp" />
 

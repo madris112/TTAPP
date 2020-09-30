@@ -3,5 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="Yellow">#E1CC18</color>
+<!--    <color name="Yellow">#E1CC18</color>-->
+    <color name="Yellow">#1e2761</color>
+    <color name="turquoise">#80408ec6</color>
+    <color name="whitetransparent">#50ffffff</color>
+    <color name="black">#000000</color>
+    <color name='orange'>#FF7700</color>
+    <color name="cardtextcolor">#000000</color>
 </resources>
