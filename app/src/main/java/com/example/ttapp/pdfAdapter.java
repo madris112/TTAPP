@@ -29,7 +29,7 @@ public class pdfAdapter extends RecyclerView.Adapter<pdfAdapter.pdfViewHolder> {
     public pdfViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.pdf_list_cardview,null);
+        View view = inflater.inflate(R.layout.pdf_list_cardview,parent,false);
         return new pdfViewHolder(view);
     }
 
