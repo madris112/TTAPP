@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ListOfPDFs">
+    tools:context=".ListOfPDFs"
+    android:background="@drawable/gradient">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/assignmentadderfab"
