@@ -1,4 +1,4 @@
 # TTAPP
 let you organize lectures inside an app
 
-rest information coming soon! stay tuned!
+This app has been designed by two students of IIT Patna.
