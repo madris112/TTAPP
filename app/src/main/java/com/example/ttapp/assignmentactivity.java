@@ -194,7 +194,7 @@ public class assignmentactivity extends AppCompatActivity {
 //                        }
 //
 //                        Intent inten = new Intent(getApplicationContext(),home.class);
-//                        startActivity(inten);
+//                        startActivity(inten);this is not working
 //
 //                    }
 //                })
