@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -12,7 +13,7 @@
         android:layout_marginTop="5sp"
         android:layout_marginBottom="5sp"
         app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="@color/turquoise"
+        app:cardBackgroundColor="#3A383A"
         app:cardElevation="0dp">
 
             <TextView
@@ -25,23 +26,32 @@
                 android:textStyle="bold"
                 android:layout_marginTop="5sp"
                 android:textColor="@color/cardtextcolor"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/cardviewicon"
-            android:layout_gravity="end"
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:background="@drawable/insidecardbackground">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cardviewicon"
+                android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
         <ImageView
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:src="@drawable/clock"
+            app:tint="#ffffff"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="80dp"
             android:layout_marginTop="15dp"/>
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
+            app:tint="#ffffff"
             android:src="@drawable/personicon"
             android:layout_marginTop="50dp"
             android:layout_marginStart="80dp"/>
@@ -51,8 +61,10 @@
             android:id="@+id/profname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily=""
             android:layout_marginStart="110sp"
             android:layout_marginTop="50sp"
+            app:tint="#ffffff"
             android:text="dandapat"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -95,6 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/videoicon"
+            app:tint="#ffffff"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"/>
 
@@ -102,9 +115,11 @@
 
             <Button
                 android:id="@+id/joinclassbutton"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
                 android:text="JOIN CLASS"
+                android:fontFamily="sans-serif"
+                android:padding="5dp"
                 android:layout_gravity="bottom|center_horizontal"
                 android:background="@drawable/buttondraw"
                 android:layout_marginBottom="5dp"
