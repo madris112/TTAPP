@@ -17,19 +17,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    app:statusBarBackground="@android:color/transparent"
     tools:context=".home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/backgroundgradient">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Yellow">
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/main_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Yellow" />
+            android:background="@android:color/transparent"
+            android:elevation="0dp"/>
     </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>
 
 
 
@@ -38,10 +48,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:backgroundTint="@color/Yellow"
+        android:backgroundTint="#FDBE00"
         android:layout_margin="20dp"
-        android:src="@drawable/addsyllabus"
-        app:tint="@color/orange"/>
+        android:src="@drawable/addsyllabus" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpgr"
@@ -54,9 +63,11 @@
         android:id="@+id/tblyt"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Yellow"
-        app:tabTextColor="@color/orange">
+        android:layout_height="40dp"
+        app:tabTextColor="#ffffff"
+        app:tabTextAppearance="@style/tablayouttext"
+        app:tabSelectedTextColor="#1E1D1D"
+        app:tabIndicatorColor="@null">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tl"
@@ -86,7 +97,13 @@
         android:layout_height="match_parent"
         android:id="@+id/navbar"
         app:menu="@menu/nav_menu"
-        android:layout_gravity="start"/>
+        android:layout_gravity="start">
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_gravity="end"
+            android:layout_height="150dp"
+            android:background="@drawable/insidecardbackground"/>
+    </com.google.android.material.navigation.NavigationView>
 
 
 
