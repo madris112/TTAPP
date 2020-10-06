@@ -75,8 +75,6 @@ public class todaydeadline extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-
-
                 for(DataSnapshot values: snapshot.getChildren()){
 
                     uploadPDF upload = values.getValue(com.example.ttapp.uploadPDF.class);
