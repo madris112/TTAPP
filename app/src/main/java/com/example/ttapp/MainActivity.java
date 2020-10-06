@@ -11,8 +11,11 @@ import android.view.View;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         loginText = (TextView)findViewById(R.id.loginText);
         timeBox = findViewById(R.id.timeBox);
         progressBar = findViewById(R.id.progressBarSignup);
+
+        ImageView studdybuddyimg= findViewById(R.id.imageView);
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.bounce);
+        studdybuddyimg.startAnimation(animation);
 
         fAuth = FirebaseAuth.getInstance();
 

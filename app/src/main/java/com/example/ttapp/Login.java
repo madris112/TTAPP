@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +41,9 @@ public class Login extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBarSignin);
 
         fAuth= FirebaseAuth.getInstance();
+        ImageView studdybuddyimg= findViewById(R.id.imageView);
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.bounce);
+        studdybuddyimg.startAnimation(animation);
 
         if(fAuth.getCurrentUser()!=null){
             Intent intent = new Intent(getApplicationContext(),home.class);

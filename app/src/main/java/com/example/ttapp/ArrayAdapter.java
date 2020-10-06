@@ -48,7 +48,7 @@ public class ArrayAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         if(view==null){
-            view = View.inflate(context,R.layout.timetablecards,null);
+            view = view.inflate(context,R.layout.timetablecards,null);
         }
 
         TextView coname = (TextView) view.findViewById(R.id.classname);
