@@ -6,27 +6,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ListOfPDFs"
-    android:background="@drawable/gradient">
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/assignmentpagedrop">
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/assignmentadderfab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/assignment"
-        android:backgroundTint="@color/Yellow"
+        android:backgroundTint="#F65058"
         android:layout_gravity="bottom|end"/>
 
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Yellow">
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:layout_marginTop="10dp"
+        app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/pdflisttoolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Yellow" />
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            app:navigationIcon="?attr/homeAsUpIndicator"/>
     </com.google.android.material.appbar.AppBarLayout>
 
 
