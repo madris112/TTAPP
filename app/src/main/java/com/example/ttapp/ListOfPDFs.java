@@ -46,7 +46,23 @@ public class ListOfPDFs extends AppCompatActivity {
 
         pdftobeshown = new ArrayList<>();
 
+
+
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("assignmentactivity","button pressed");
+                Intent homeintent = new Intent(getApplicationContext(),home.class);
+                startActivity(homeintent);
+
+
+            }
+        });
 
         pdflist.setLayoutManager(new LinearLayoutManager(this));
 

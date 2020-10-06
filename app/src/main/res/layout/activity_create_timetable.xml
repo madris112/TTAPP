@@ -7,62 +7,72 @@
     android:orientation="vertical"
     tools:context=".CreateTimetable">
 
-    <TextView
-        android:id="@+id/describe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold"
-        android:text="CREATE COURSE"
-        android:textSize="24sp" />
-
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical"
+        android:layout_height="250dp"
+        android:background="@drawable/backgroundgradient">
 
-        <EditText
-            android:id="@+id/coursename"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/describe"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="COURSE NAME"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginVertical="3dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:text="CREATE COURSE"
+            android:textSize="24sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/instructorname"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="INSTRUCTOR"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginVertical="3dp"/>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/coursename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="COURSE NAME"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginVertical="3dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/instructorname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="INSTRUCTOR"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginVertical="3dp"/>
 
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-<com.google.android.material.textfield.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/link"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="COURSE LINK"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginVertical="3dp"/>
+            <EditText
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="COURSE LINK"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginVertical="3dp"/>
 
 
 
-</com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
 
 
 
@@ -274,7 +284,8 @@
         android:layout_height="wrap_content"
         android:text="SUBMIT"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttondraw"/>
 
 
 
