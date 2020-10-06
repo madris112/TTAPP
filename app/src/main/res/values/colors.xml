@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#FDBE00</color>
 <!--    <color name="Yellow">#E1CC18</color>-->
     <color name="Yellow">#ffffff</color>
     <color name="turquoise">#80408ec6</color>

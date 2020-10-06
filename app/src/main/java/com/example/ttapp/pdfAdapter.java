@@ -2,7 +2,6 @@ package com.example.ttapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -18,7 +17,7 @@ public class pdfAdapter extends RecyclerView.Adapter<pdfAdapter.pdfViewHolder> {
     private List<uploadPDF> pdflist;
     private RecyclerViewClickListener listener;
 
-    public pdfAdapter(Context context, List<uploadPDF> pdflist,RecyclerViewClickListener listener) {
+    public pdfAdapter(Context context, List<uploadPDF> pdflist, RecyclerViewClickListener listener) {
         this.context = context;
         this.pdflist = pdflist;
         this.listener = listener;
