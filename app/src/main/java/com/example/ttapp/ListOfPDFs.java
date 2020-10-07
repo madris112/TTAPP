@@ -34,11 +34,20 @@ public class ListOfPDFs extends AppCompatActivity {
     FloatingActionButton assignmentadderfab;
     pdfAdapter adapter;
     pdfAdapter.RecyclerViewClickListener listener;
+    int courseint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_p_d_fs);
+
+        Intent intent=getIntent();
+        Bundle b = intent.getExtras();
+
+        if(b!=null){
+            courseint = (int)b.get("course");
+        }
+
 
         toolbar = findViewById(R.id.pdflisttoolbar);
         pdflist = findViewById(R.id.listofpdf);
@@ -92,7 +101,31 @@ public class ListOfPDFs extends AppCompatActivity {
 
                 for(DataSnapshot postsnapshot :  snapshot.getChildren()){
                     uploadPDF uppdf = postsnapshot.getValue(com.example.ttapp.uploadPDF.class);
-                    pdftobeshown.add(uppdf);
+
+                    if(courseint==1 && uppdf.getSubjectname().equals("CS204")) {
+
+                        pdftobeshown.add(uppdf);
+                    }
+
+                    if(courseint==2 && uppdf.getSubjectname().equals("CS205")) {
+
+                        pdftobeshown.add(uppdf);
+                    }
+
+                    if(courseint==3 && uppdf.getSubjectname().equals("CS206")) {
+
+                        pdftobeshown.add(uppdf);
+                    }
+
+                    if(courseint==4 && uppdf.getSubjectname().equals("MA201")) {
+
+                        pdftobeshown.add(uppdf);
+                    }
+
+                    if(courseint==5 && uppdf.getSubjectname().equals("HS201")) {
+
+                        pdftobeshown.add(uppdf);
+                    }
 
                 }
              setOnClickListener();
