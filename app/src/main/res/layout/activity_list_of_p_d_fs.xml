@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/assignment"
         android:backgroundTint="#F65058"
+        android:layout_margin="20dp"
         android:layout_gravity="bottom|end"/>
 
 
@@ -45,11 +46,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listofpdf"
         android:layout_width="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:layout_height="match_parent" />
-
-
-
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
